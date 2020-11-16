@@ -1,0 +1,16 @@
+syntax = "proto3";
+package user;
+option go_package = "github.com/vaibhav/try-assignment2/server/protos/user";
+
+service UserService {
+    rpc NameUsername(NameUsernameReq) returns (NameUsernameRes) {}
+}
+
+message NameUsernameReq {
+    string name = 1;
+    string username = 2;
+}
+
+message NameUsernameRes {
+    bool isSent = 1;
+}
